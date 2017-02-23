@@ -9,13 +9,15 @@
 /* Begin PBXBuildFile section */
 		A573C5F11E58A29900702346 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = A573C5F01E58A29900702346 /* main.m */; };
 		A573C5F41E58A29900702346 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = A573C5F31E58A29900702346 /* AppDelegate.m */; };
-		A573C5F71E58A29900702346 /* FirstViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A573C5F61E58A29900702346 /* FirstViewController.m */; };
-		A573C5FA1E58A29900702346 /* SecondViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A573C5F91E58A29900702346 /* SecondViewController.m */; };
 		A573C5FD1E58A29900702346 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A573C5FB1E58A29900702346 /* Main.storyboard */; };
 		A573C5FF1E58A29900702346 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A573C5FE1E58A29900702346 /* Assets.xcassets */; };
 		A573C6021E58A29900702346 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A573C6001E58A29900702346 /* LaunchScreen.storyboard */; };
 		A573C60D1E58A29900702346 /* notHomeTests.m in Sources */ = {isa = PBXBuildFile; fileRef = A573C60C1E58A29900702346 /* notHomeTests.m */; };
 		A573C6181E58A29900702346 /* notHomeUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = A573C6171E58A29900702346 /* notHomeUITests.m */; };
+		A5ABFAE21E5D6D5A00B5E7FA /* FirstViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A5ABFADE1E5D6D5A00B5E7FA /* FirstViewController.m */; };
+		A5ABFAE31E5D6D5A00B5E7FA /* SecondViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A5ABFAE01E5D6D5A00B5E7FA /* SecondViewController.m */; };
+		A5ABFAE61E5D7A9B00B5E7FA /* KudaGoManager.m in Sources */ = {isa = PBXBuildFile; fileRef = A5ABFAE51E5D7A9B00B5E7FA /* KudaGoManager.m */; };
+		A5ABFAE91E5F00E700B5E7FA /* Movie.m in Sources */ = {isa = PBXBuildFile; fileRef = A5ABFAE81E5F00E700B5E7FA /* Movie.m */; };
 		C53B9A269122A49A9F4D5368 /* libPods-notHome.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 1FDD803F17515DE6005DE8BA /* libPods-notHome.a */; };
 		F3B5B824011A3F6877EF8852 /* libPods-notHomeTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 60E67580A4A8D0963A64A320 /* libPods-notHomeTests.a */; };
 		FF02B3D229D146DD51EB5C38 /* libPods-notHomeUITests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = E9B11ADE824EB0228E181903 /* libPods-notHomeUITests.a */; };
@@ -48,10 +50,6 @@
 		A573C5F01E58A29900702346 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		A573C5F21E58A29900702346 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		A573C5F31E58A29900702346 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
-		A573C5F51E58A29900702346 /* FirstViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FirstViewController.h; sourceTree = "<group>"; };
-		A573C5F61E58A29900702346 /* FirstViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FirstViewController.m; sourceTree = "<group>"; };
-		A573C5F81E58A29900702346 /* SecondViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SecondViewController.h; sourceTree = "<group>"; };
-		A573C5F91E58A29900702346 /* SecondViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SecondViewController.m; sourceTree = "<group>"; };
 		A573C5FC1E58A29900702346 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		A573C5FE1E58A29900702346 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		A573C6011E58A29900702346 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -62,6 +60,14 @@
 		A573C6131E58A29900702346 /* notHomeUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = notHomeUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		A573C6171E58A29900702346 /* notHomeUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = notHomeUITests.m; sourceTree = "<group>"; };
 		A573C6191E58A29900702346 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		A5ABFADD1E5D6D5A00B5E7FA /* FirstViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FirstViewController.h; sourceTree = "<group>"; };
+		A5ABFADE1E5D6D5A00B5E7FA /* FirstViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FirstViewController.m; sourceTree = "<group>"; };
+		A5ABFADF1E5D6D5A00B5E7FA /* SecondViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SecondViewController.h; sourceTree = "<group>"; };
+		A5ABFAE01E5D6D5A00B5E7FA /* SecondViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SecondViewController.m; sourceTree = "<group>"; };
+		A5ABFAE41E5D7A9B00B5E7FA /* KudaGoManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KudaGoManager.h; sourceTree = "<group>"; };
+		A5ABFAE51E5D7A9B00B5E7FA /* KudaGoManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KudaGoManager.m; sourceTree = "<group>"; };
+		A5ABFAE71E5F00E700B5E7FA /* Movie.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Movie.h; path = notHome/Model/Movie.h; sourceTree = SOURCE_ROOT; };
+		A5ABFAE81E5F00E700B5E7FA /* Movie.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Movie.m; path = notHome/Model/Movie.m; sourceTree = SOURCE_ROOT; };
 		A66D952373CA12F3A3A8FA34 /* Pods-notHomeTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-notHomeTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-notHomeTests/Pods-notHomeTests.debug.xcconfig"; sourceTree = "<group>"; };
 		E9B11ADE824EB0228E181903 /* libPods-notHomeUITests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-notHomeUITests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		EB2943A172BB9FC677CD598E /* Pods-notHomeUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-notHomeUITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-notHomeUITests/Pods-notHomeUITests.debug.xcconfig"; sourceTree = "<group>"; };
@@ -131,16 +137,12 @@
 		A573C5EE1E58A29900702346 /* notHome */ = {
 			isa = PBXGroup;
 			children = (
+				A5ABFAEA1E5F00EB00B5E7FA /* Model */,
+				A5ABFAE11E5D6D5A00B5E7FA /* Networking */,
+				A5ABFADC1E5D6D5A00B5E7FA /* Controllers */,
 				A573C5F21E58A29900702346 /* AppDelegate.h */,
 				A573C5F31E58A29900702346 /* AppDelegate.m */,
-				A573C5F51E58A29900702346 /* FirstViewController.h */,
-				A573C5F61E58A29900702346 /* FirstViewController.m */,
-				A573C5F81E58A29900702346 /* SecondViewController.h */,
-				A573C5F91E58A29900702346 /* SecondViewController.m */,
 				A573C5FB1E58A29900702346 /* Main.storyboard */,
-				A573C5FE1E58A29900702346 /* Assets.xcassets */,
-				A573C6001E58A29900702346 /* LaunchScreen.storyboard */,
-				A573C6031E58A29900702346 /* Info.plist */,
 				A573C5EF1E58A29900702346 /* Supporting Files */,
 			);
 			path = notHome;
@@ -149,7 +151,10 @@
 		A573C5EF1E58A29900702346 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				A573C6001E58A29900702346 /* LaunchScreen.storyboard */,
+				A573C5FE1E58A29900702346 /* Assets.xcassets */,
 				A573C5F01E58A29900702346 /* main.m */,
+				A573C6031E58A29900702346 /* Info.plist */,
 			);
 			name = "Supporting Files";
 			sourceTree = "<group>";
@@ -170,6 +175,36 @@
 				A573C6191E58A29900702346 /* Info.plist */,
 			);
 			path = notHomeUITests;
+			sourceTree = "<group>";
+		};
+		A5ABFADC1E5D6D5A00B5E7FA /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				A5ABFADD1E5D6D5A00B5E7FA /* FirstViewController.h */,
+				A5ABFADE1E5D6D5A00B5E7FA /* FirstViewController.m */,
+				A5ABFADF1E5D6D5A00B5E7FA /* SecondViewController.h */,
+				A5ABFAE01E5D6D5A00B5E7FA /* SecondViewController.m */,
+			);
+			path = Controllers;
+			sourceTree = "<group>";
+		};
+		A5ABFAE11E5D6D5A00B5E7FA /* Networking */ = {
+			isa = PBXGroup;
+			children = (
+				A5ABFAE41E5D7A9B00B5E7FA /* KudaGoManager.h */,
+				A5ABFAE51E5D7A9B00B5E7FA /* KudaGoManager.m */,
+			);
+			path = Networking;
+			sourceTree = "<group>";
+		};
+		A5ABFAEA1E5F00EB00B5E7FA /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				A5ABFAE71E5F00E700B5E7FA /* Movie.h */,
+				A5ABFAE81E5F00E700B5E7FA /* Movie.m */,
+			);
+			name = Model;
+			path = Networking;
 			sourceTree = "<group>";
 		};
 		CEAC75A90D2144F7E9BC2434 /* Pods */ = {
@@ -335,7 +370,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run \'pod install\' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
 			showEnvVarsInLog = 0;
 		};
 		0C6FE0974484D95458CBE348 /* [CP] Check Pods Manifest.lock */ = {
@@ -350,7 +385,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run \'pod install\' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
 			showEnvVarsInLog = 0;
 		};
 		29319F20D1E8C888D83D3B7E /* [CP] Copy Pods Resources */ = {
@@ -455,7 +490,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run \'pod install\' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
 			showEnvVarsInLog = 0;
 		};
 /* End PBXShellScriptBuildPhase section */
@@ -465,9 +500,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				A573C5FA1E58A29900702346 /* SecondViewController.m in Sources */,
+				A5ABFAE91E5F00E700B5E7FA /* Movie.m in Sources */,
+				A5ABFAE31E5D6D5A00B5E7FA /* SecondViewController.m in Sources */,
+				A5ABFAE61E5D7A9B00B5E7FA /* KudaGoManager.m in Sources */,
 				A573C5F41E58A29900702346 /* AppDelegate.m in Sources */,
-				A573C5F71E58A29900702346 /* FirstViewController.m in Sources */,
+				A5ABFAE21E5D6D5A00B5E7FA /* FirstViewController.m in Sources */,
 				A573C5F11E58A29900702346 /* main.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -706,6 +743,7 @@
 				A573C61E1E58A29900702346 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		A573C61F1E58A29900702346 /* Build configuration list for PBXNativeTarget "notHomeTests" */ = {
 			isa = XCConfigurationList;
@@ -714,6 +752,7 @@
 				A573C6211E58A29900702346 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		A573C6221E58A29900702346 /* Build configuration list for PBXNativeTarget "notHomeUITests" */ = {
 			isa = XCConfigurationList;
@@ -722,6 +761,7 @@
 				A573C6241E58A29900702346 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

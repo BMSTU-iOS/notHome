@@ -7,6 +7,7 @@
 //
 
 #import "AppDelegate.h"
+#import "KudaGoManager.h"
 
 @interface AppDelegate ()
 
@@ -17,6 +18,35 @@
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     // Override point for customization after application launch.
+
+    // Request movies examples
+    /*
+    [[KudaGoManager sharedManager] getMoviesWithPage:1
+                                            pageSize:5
+                                             orderBy:nil
+                                            location:@"msk"
+                                                free:true
+                                             placeID:0
+                                               since:nil
+                                               until:nil
+                                             success:^(NSArray *movies) {
+                                                 
+                                             }
+                                             failure:^(NSError *error) {
+                                                 
+                                             }];
+    
+    [[KudaGoManager sharedManager] getMoviesWithPage:1
+                                            pageSize:30
+                                            location:@"msk"
+                                             success:^(NSArray *movies) {
+                                                 
+                                             }
+                                             failure:^(NSError *error) {
+                                                 
+                                             }];
+    */
+    
     return YES;
 }
 
