@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		1831B3A11E6873EA000F084F /* movieCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 1831B3A01E6873EA000F084F /* movieCell.m */; };
 		A573C5F11E58A29900702346 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = A573C5F01E58A29900702346 /* main.m */; };
 		A573C5F41E58A29900702346 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = A573C5F31E58A29900702346 /* AppDelegate.m */; };
 		A573C5FD1E58A29900702346 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A573C5FB1E58A29900702346 /* Main.storyboard */; };
@@ -42,6 +43,8 @@
 
 /* Begin PBXFileReference section */
 		07472FB08A35692174BCEAEC /* Pods-notHome.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-notHome.release.xcconfig"; path = "Pods/Target Support Files/Pods-notHome/Pods-notHome.release.xcconfig"; sourceTree = "<group>"; };
+		1831B39F1E6873EA000F084F /* movieCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = movieCell.h; sourceTree = "<group>"; };
+		1831B3A01E6873EA000F084F /* movieCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = movieCell.m; sourceTree = "<group>"; };
 		1FDD803F17515DE6005DE8BA /* libPods-notHome.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-notHome.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		54A2F2D86BF5052A92924C71 /* Pods-notHomeUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-notHomeUITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-notHomeUITests/Pods-notHomeUITests.release.xcconfig"; sourceTree = "<group>"; };
 		60E67580A4A8D0963A64A320 /* libPods-notHomeTests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-notHomeTests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -102,6 +105,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		1831B39E1E687366000F084F /* cells */ = {
+			isa = PBXGroup;
+			children = (
+				1831B39F1E6873EA000F084F /* movieCell.h */,
+				1831B3A01E6873EA000F084F /* movieCell.m */,
+			);
+			path = cells;
+			sourceTree = "<group>";
+		};
 		1D0C79BC544B31E5BFECC575 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
@@ -137,6 +149,7 @@
 		A573C5EE1E58A29900702346 /* notHome */ = {
 			isa = PBXGroup;
 			children = (
+				1831B39E1E687366000F084F /* cells */,
 				A5ABFAEA1E5F00EB00B5E7FA /* Model */,
 				A5ABFAE11E5D6D5A00B5E7FA /* Networking */,
 				A5ABFADC1E5D6D5A00B5E7FA /* Controllers */,
@@ -501,6 +514,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				A5ABFAE91E5F00E700B5E7FA /* Movie.m in Sources */,
+				1831B3A11E6873EA000F084F /* movieCell.m in Sources */,
 				A5ABFAE31E5D6D5A00B5E7FA /* SecondViewController.m in Sources */,
 				A5ABFAE61E5D7A9B00B5E7FA /* KudaGoManager.m in Sources */,
 				A573C5F41E58A29900702346 /* AppDelegate.m in Sources */,

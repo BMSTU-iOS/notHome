@@ -16,5 +16,6 @@
 @property (strong, nonatomic) NSURL *posterURL;
 
 - (instancetype)initWithResponse:(NSDictionary *)response;
+- (instancetype) initWithModel:(NSInteger)ID title:(NSString *)title posterURL:(NSURL *)posterURL;
 
 @end

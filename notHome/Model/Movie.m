@@ -39,4 +39,13 @@ static NSString * const kMoviePoster = @"poster";
     return self;
 }
 
+-(instancetype)initWithModel:(NSInteger)ID title:(NSString *)title posterURL:(NSURL *)posterURL {
+    if (self = [super init]) {
+        _ID = ID;
+        _title = title;
+        _posterURL = posterURL;
+    }
+    return self;
+}
+
 @end
