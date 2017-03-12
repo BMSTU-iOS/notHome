@@ -10,4 +10,12 @@
 
 @interface NHPlace : NHObject
 
+@property (strong, nonatomic) NSString *title;
+@property (strong, nonatomic) NSString *shortTitle;
+
+@property (strong, nonatomic) NSString *shortDescription;
+@property (strong, nonatomic) NSString *fullDescription;
+
+- (instancetype)initWithResponse:(NSDictionary *)response;
+
 @end

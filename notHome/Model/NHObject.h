@@ -11,5 +11,8 @@
 @interface NHObject : NSObject
 
 @property (assign, nonatomic) NSInteger ID;
+@property (strong, nonatomic) NSString *slug;
+
+- (instancetype)initWithResponse:(NSDictionary *)response;
 
 @end

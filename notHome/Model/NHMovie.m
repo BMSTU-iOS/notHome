@@ -8,31 +8,43 @@
 
 #import "NHMovie.h"
 
-static NSString * const kMovieID = @"id";
 static NSString * const kMovieTitle = @"title";
+static NSString * const kMovieShortDescription = @"description";
+static NSString * const kMovieFullDescription = @"body_text";
 static NSString * const kMoviePoster = @"poster";
+static NSString * const kMovieSiteURL = @"url";
 
 @implementation NHMovie
 
 - (instancetype)initWithResponse:(NSDictionary *)response {
     
-    self = [super init];
+    self = [super initWithResponse:response];
 
     if (self) {
-        
-        // Set ID
-        if ([response objectForKey:kMovieID]) {
-            self.ID = ((NSNumber *)[response objectForKey:kMovieID]).integerValue;
-        }
         
         // Set title
         if ([response objectForKey:kMovieTitle]) {
             self.title = (NSString *)[response objectForKey:kMovieTitle];
         }
         
+        // Set description
+        if ([response objectForKey:kMovieShortDescription]) {
+            self.shortDescription = (NSString *)[response objectForKey:kMovieShortDescription];
+        }
+        
+        // Set full description
+        if ([response objectForKey:kMovieFullDescription]) {
+            self.fullDescription = (NSString *)[response objectForKey:kMovieFullDescription];
+        }
+        
         // Set poster URL
         if ([response objectForKey:kMoviePoster]) {
             self.posterURL = [NSURL URLWithString:(NSString *)[[response objectForKey:kMoviePoster] objectForKey:@"image"]];
+        }
+        
+        // Set site URL
+        if ([response objectForKey:kMovieSiteURL]) {
+            self.siteURL = [NSURL URLWithString:(NSString *)[response objectForKey:kMovieSiteURL]];
         }
     }
     

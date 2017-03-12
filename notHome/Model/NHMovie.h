@@ -11,7 +11,12 @@
 @interface NHMovie : NHObject
 
 @property (strong, nonatomic) NSString *title;
+
+@property (strong, nonatomic) NSString *shortDescription;
+@property (strong, nonatomic) NSString *fullDescription;
+
 @property (strong, nonatomic) NSURL *posterURL;
+@property (strong, nonatomic) NSURL *siteURL;
 
 - (instancetype)initWithResponse:(NSDictionary *)response;
 
