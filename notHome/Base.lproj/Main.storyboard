@@ -110,11 +110,22 @@
                     <connections>
                         <segue destination="9pv-A4-QxB" kind="relationship" relationship="viewControllers" id="u7Y-xg-7CH"/>
                         <segue destination="8rJ-Kc-sve" kind="relationship" relationship="viewControllers" id="lzU-1b-eKA"/>
+                        <segue destination="srE-zk-1Yg" kind="relationship" relationship="viewControllers" id="vCY-dX-t5U"/>
                     </connections>
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="HuB-VB-40B" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="0.0" y="0.0"/>
+        </scene>
+        <!--MSSearchBar-->
+        <scene sceneID="sjh-Pg-dcf">
+            <objects>
+                <viewControllerPlaceholder storyboardName="MSSearchBar" id="srE-zk-1Yg" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Item" id="a30-K3-eEY"/>
+                </viewControllerPlaceholder>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="osQ-i1-Bo9" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-2" y="530"/>
         </scene>
     </scenes>
     <resources>

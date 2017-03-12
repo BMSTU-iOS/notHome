@@ -21,6 +21,8 @@
 		A5ABFAE91E5F00E700B5E7FA /* Movie.m in Sources */ = {isa = PBXBuildFile; fileRef = A5ABFAE81E5F00E700B5E7FA /* Movie.m */; };
 		C53B9A269122A49A9F4D5368 /* libPods-notHome.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 1FDD803F17515DE6005DE8BA /* libPods-notHome.a */; };
 		F3B5B824011A3F6877EF8852 /* libPods-notHomeTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 60E67580A4A8D0963A64A320 /* libPods-notHomeTests.a */; };
+		F5AACD761E74851500143A07 /* MSSearchBarViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F5AACD751E74851500143A07 /* MSSearchBarViewController.m */; };
+		F5AACD791E74857400143A07 /* MSSearchBar.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F5AACD771E74857400143A07 /* MSSearchBar.storyboard */; };
 		FF02B3D229D146DD51EB5C38 /* libPods-notHomeUITests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = E9B11ADE824EB0228E181903 /* libPods-notHomeUITests.a */; };
 /* End PBXBuildFile section */
 
@@ -75,6 +77,9 @@
 		E9B11ADE824EB0228E181903 /* libPods-notHomeUITests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-notHomeUITests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		EB2943A172BB9FC677CD598E /* Pods-notHomeUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-notHomeUITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-notHomeUITests/Pods-notHomeUITests.debug.xcconfig"; sourceTree = "<group>"; };
 		F4674073B2B37018E3B729C2 /* Pods-notHomeTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-notHomeTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-notHomeTests/Pods-notHomeTests.release.xcconfig"; sourceTree = "<group>"; };
+		F5AACD741E74851500143A07 /* MSSearchBarViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MSSearchBarViewController.h; sourceTree = "<group>"; };
+		F5AACD751E74851500143A07 /* MSSearchBarViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MSSearchBarViewController.m; sourceTree = "<group>"; };
+		F5AACD781E74857400143A07 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/MSSearchBar.storyboard; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -156,6 +161,7 @@
 				A573C5F21E58A29900702346 /* AppDelegate.h */,
 				A573C5F31E58A29900702346 /* AppDelegate.m */,
 				A573C5FB1E58A29900702346 /* Main.storyboard */,
+				F5AACD771E74857400143A07 /* MSSearchBar.storyboard */,
 				A573C5EF1E58A29900702346 /* Supporting Files */,
 			);
 			path = notHome;
@@ -197,6 +203,8 @@
 				A5ABFADE1E5D6D5A00B5E7FA /* FirstViewController.m */,
 				A5ABFADF1E5D6D5A00B5E7FA /* SecondViewController.h */,
 				A5ABFAE01E5D6D5A00B5E7FA /* SecondViewController.m */,
+				F5AACD741E74851500143A07 /* MSSearchBarViewController.h */,
+				F5AACD751E74851500143A07 /* MSSearchBarViewController.m */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -348,6 +356,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F5AACD791E74857400143A07 /* MSSearchBar.storyboard in Resources */,
 				A573C6021E58A29900702346 /* LaunchScreen.storyboard in Resources */,
 				A573C5FF1E58A29900702346 /* Assets.xcassets in Resources */,
 				A573C5FD1E58A29900702346 /* Main.storyboard in Resources */,
@@ -517,6 +526,7 @@
 				1831B3A11E6873EA000F084F /* movieCell.m in Sources */,
 				A5ABFAE31E5D6D5A00B5E7FA /* SecondViewController.m in Sources */,
 				A5ABFAE61E5D7A9B00B5E7FA /* KudaGoManager.m in Sources */,
+				F5AACD761E74851500143A07 /* MSSearchBarViewController.m in Sources */,
 				A573C5F41E58A29900702346 /* AppDelegate.m in Sources */,
 				A5ABFAE21E5D6D5A00B5E7FA /* FirstViewController.m in Sources */,
 				A573C5F11E58A29900702346 /* main.m in Sources */,
@@ -569,6 +579,14 @@
 				A573C6011E58A29900702346 /* Base */,
 			);
 			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+		F5AACD771E74857400143A07 /* MSSearchBar.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				F5AACD781E74857400143A07 /* Base */,
+			);
+			name = MSSearchBar.storyboard;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */
