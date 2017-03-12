@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		A55314761E75596B002C0AD9 /* NHObject.m in Sources */ = {isa = PBXBuildFile; fileRef = A55314751E75596B002C0AD9 /* NHObject.m */; };
+		A55314791E755A1F002C0AD9 /* NHEvent.m in Sources */ = {isa = PBXBuildFile; fileRef = A55314781E755A1F002C0AD9 /* NHEvent.m */; };
+		A553147C1E755A3C002C0AD9 /* NHPlace.m in Sources */ = {isa = PBXBuildFile; fileRef = A553147B1E755A3C002C0AD9 /* NHPlace.m */; };
 		A573C5F11E58A29900702346 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = A573C5F01E58A29900702346 /* main.m */; };
 		A573C5F41E58A29900702346 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = A573C5F31E58A29900702346 /* AppDelegate.m */; };
 		A573C5FD1E58A29900702346 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A573C5FB1E58A29900702346 /* Main.storyboard */; };
@@ -17,7 +20,7 @@
 		A5ABFAE21E5D6D5A00B5E7FA /* FirstViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A5ABFADE1E5D6D5A00B5E7FA /* FirstViewController.m */; };
 		A5ABFAE31E5D6D5A00B5E7FA /* SecondViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A5ABFAE01E5D6D5A00B5E7FA /* SecondViewController.m */; };
 		A5ABFAE61E5D7A9B00B5E7FA /* KudaGoManager.m in Sources */ = {isa = PBXBuildFile; fileRef = A5ABFAE51E5D7A9B00B5E7FA /* KudaGoManager.m */; };
-		A5ABFAE91E5F00E700B5E7FA /* Movie.m in Sources */ = {isa = PBXBuildFile; fileRef = A5ABFAE81E5F00E700B5E7FA /* Movie.m */; };
+		A5ABFAE91E5F00E700B5E7FA /* NHMovie.m in Sources */ = {isa = PBXBuildFile; fileRef = A5ABFAE81E5F00E700B5E7FA /* NHMovie.m */; };
 		C53B9A269122A49A9F4D5368 /* libPods-notHome.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 1FDD803F17515DE6005DE8BA /* libPods-notHome.a */; };
 		F3B5B824011A3F6877EF8852 /* libPods-notHomeTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 60E67580A4A8D0963A64A320 /* libPods-notHomeTests.a */; };
 		F5AACD761E74851500143A07 /* MSSearchBarViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F5AACD751E74851500143A07 /* MSSearchBarViewController.m */; };
@@ -48,6 +51,12 @@
 		54A2F2D86BF5052A92924C71 /* Pods-notHomeUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-notHomeUITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-notHomeUITests/Pods-notHomeUITests.release.xcconfig"; sourceTree = "<group>"; };
 		60E67580A4A8D0963A64A320 /* libPods-notHomeTests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-notHomeTests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		6654F24244A659DC101BDACE /* Pods-notHome.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-notHome.debug.xcconfig"; path = "Pods/Target Support Files/Pods-notHome/Pods-notHome.debug.xcconfig"; sourceTree = "<group>"; };
+		A55314741E75596B002C0AD9 /* NHObject.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = NHObject.h; path = notHome/Model/NHObject.h; sourceTree = SOURCE_ROOT; };
+		A55314751E75596B002C0AD9 /* NHObject.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = NHObject.m; path = notHome/Model/NHObject.m; sourceTree = SOURCE_ROOT; };
+		A55314771E755A1F002C0AD9 /* NHEvent.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = NHEvent.h; path = notHome/Model/NHEvent.h; sourceTree = SOURCE_ROOT; };
+		A55314781E755A1F002C0AD9 /* NHEvent.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = NHEvent.m; path = notHome/Model/NHEvent.m; sourceTree = SOURCE_ROOT; };
+		A553147A1E755A3C002C0AD9 /* NHPlace.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = NHPlace.h; path = notHome/Model/NHPlace.h; sourceTree = SOURCE_ROOT; };
+		A553147B1E755A3C002C0AD9 /* NHPlace.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = NHPlace.m; path = notHome/Model/NHPlace.m; sourceTree = SOURCE_ROOT; };
 		A573C5EC1E58A29900702346 /* notHome.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = notHome.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A573C5F01E58A29900702346 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		A573C5F21E58A29900702346 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -68,8 +77,8 @@
 		A5ABFAE01E5D6D5A00B5E7FA /* SecondViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SecondViewController.m; sourceTree = "<group>"; };
 		A5ABFAE41E5D7A9B00B5E7FA /* KudaGoManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KudaGoManager.h; sourceTree = "<group>"; };
 		A5ABFAE51E5D7A9B00B5E7FA /* KudaGoManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KudaGoManager.m; sourceTree = "<group>"; };
-		A5ABFAE71E5F00E700B5E7FA /* Movie.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Movie.h; path = notHome/Model/Movie.h; sourceTree = SOURCE_ROOT; };
-		A5ABFAE81E5F00E700B5E7FA /* Movie.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Movie.m; path = notHome/Model/Movie.m; sourceTree = SOURCE_ROOT; };
+		A5ABFAE71E5F00E700B5E7FA /* NHMovie.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = NHMovie.h; path = notHome/Model/NHMovie.h; sourceTree = SOURCE_ROOT; };
+		A5ABFAE81E5F00E700B5E7FA /* NHMovie.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = NHMovie.m; path = notHome/Model/NHMovie.m; sourceTree = SOURCE_ROOT; };
 		A66D952373CA12F3A3A8FA34 /* Pods-notHomeTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-notHomeTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-notHomeTests/Pods-notHomeTests.debug.xcconfig"; sourceTree = "<group>"; };
 		E9B11ADE824EB0228E181903 /* libPods-notHomeUITests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-notHomeUITests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		EB2943A172BB9FC677CD598E /* Pods-notHomeUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-notHomeUITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-notHomeUITests/Pods-notHomeUITests.debug.xcconfig"; sourceTree = "<group>"; };
@@ -208,8 +217,14 @@
 		A5ABFAEA1E5F00EB00B5E7FA /* Model */ = {
 			isa = PBXGroup;
 			children = (
-				A5ABFAE71E5F00E700B5E7FA /* Movie.h */,
-				A5ABFAE81E5F00E700B5E7FA /* Movie.m */,
+				A55314741E75596B002C0AD9 /* NHObject.h */,
+				A55314751E75596B002C0AD9 /* NHObject.m */,
+				A55314771E755A1F002C0AD9 /* NHEvent.h */,
+				A55314781E755A1F002C0AD9 /* NHEvent.m */,
+				A553147A1E755A3C002C0AD9 /* NHPlace.h */,
+				A553147B1E755A3C002C0AD9 /* NHPlace.m */,
+				A5ABFAE71E5F00E700B5E7FA /* NHMovie.h */,
+				A5ABFAE81E5F00E700B5E7FA /* NHMovie.m */,
 			);
 			name = Model;
 			path = Networking;
@@ -299,6 +314,7 @@
 		A573C5E41E58A29800702346 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
+				CLASSPREFIX = NH;
 				LastUpgradeCheck = 0820;
 				ORGANIZATIONNAME = "BMSTU-iOS";
 				TargetAttributes = {
@@ -509,10 +525,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				A5ABFAE91E5F00E700B5E7FA /* Movie.m in Sources */,
+				A5ABFAE91E5F00E700B5E7FA /* NHMovie.m in Sources */,
 				A5ABFAE31E5D6D5A00B5E7FA /* SecondViewController.m in Sources */,
+				A55314761E75596B002C0AD9 /* NHObject.m in Sources */,
+				A553147C1E755A3C002C0AD9 /* NHPlace.m in Sources */,
 				A5ABFAE61E5D7A9B00B5E7FA /* KudaGoManager.m in Sources */,
 				F5AACD761E74851500143A07 /* MSSearchBarViewController.m in Sources */,
+				A55314791E755A1F002C0AD9 /* NHEvent.m in Sources */,
 				A573C5F41E58A29900702346 /* AppDelegate.m in Sources */,
 				A5ABFAE21E5D6D5A00B5E7FA /* FirstViewController.m in Sources */,
 				A573C5F11E58A29900702346 /* main.m in Sources */,

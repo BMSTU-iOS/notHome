@@ -9,7 +9,7 @@
 #import "KudaGoManager.h"
 #import "AFNetworking.h"
 
-#import "Movie.h"
+#import "NHMovie.h"
 
 static NSString * const kKudaGoURL = @"https://kudago.com/public-api/v1.3/";
 
@@ -140,7 +140,7 @@ static NSString * const kKudaGoURL = @"https://kudago.com/public-api/v1.3/";
                              
                              for (NSDictionary *movieResponse in movieResponses) {
                                  
-                                 Movie *movie = [[Movie alloc] initWithResponse:movieResponse];
+                                 NHMovie *movie = [[NHMovie alloc] initWithResponse:movieResponse];
         
                                  [movies addObject:movie];
                              }

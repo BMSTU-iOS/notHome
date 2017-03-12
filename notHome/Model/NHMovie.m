@@ -1,18 +1,18 @@
 //
-//  Movie.m
+//  NHMovie.m
 //  notHome
 //
 //  Created by Artem Belkov on 23/02/2017.
 //  Copyright © 2017 BMSTU-iOS. All rights reserved.
 //
 
-#import "Movie.h"
+#import "NHMovie.h"
 
 static NSString * const kMovieID = @"id";
 static NSString * const kMovieTitle = @"title";
 static NSString * const kMoviePoster = @"poster";
 
-@implementation Movie
+@implementation NHMovie
 
 - (instancetype)initWithResponse:(NSDictionary *)response {
     
