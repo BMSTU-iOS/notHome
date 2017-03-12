@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		A530FE761E75F70400FD3B3E /* NHModelTests.m in Sources */ = {isa = PBXBuildFile; fileRef = A530FE751E75F70400FD3B3E /* NHModelTests.m */; };
 		A55314761E75596B002C0AD9 /* NHObject.m in Sources */ = {isa = PBXBuildFile; fileRef = A55314751E75596B002C0AD9 /* NHObject.m */; };
 		A55314791E755A1F002C0AD9 /* NHEvent.m in Sources */ = {isa = PBXBuildFile; fileRef = A55314781E755A1F002C0AD9 /* NHEvent.m */; };
 		A553147C1E755A3C002C0AD9 /* NHPlace.m in Sources */ = {isa = PBXBuildFile; fileRef = A553147B1E755A3C002C0AD9 /* NHPlace.m */; };
@@ -51,6 +52,7 @@
 		54A2F2D86BF5052A92924C71 /* Pods-notHomeUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-notHomeUITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-notHomeUITests/Pods-notHomeUITests.release.xcconfig"; sourceTree = "<group>"; };
 		60E67580A4A8D0963A64A320 /* libPods-notHomeTests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-notHomeTests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		6654F24244A659DC101BDACE /* Pods-notHome.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-notHome.debug.xcconfig"; path = "Pods/Target Support Files/Pods-notHome/Pods-notHome.debug.xcconfig"; sourceTree = "<group>"; };
+		A530FE751E75F70400FD3B3E /* NHModelTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NHModelTests.m; sourceTree = "<group>"; };
 		A55314741E75596B002C0AD9 /* NHObject.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = NHObject.h; path = notHome/Model/NHObject.h; sourceTree = SOURCE_ROOT; };
 		A55314751E75596B002C0AD9 /* NHObject.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = NHObject.m; path = notHome/Model/NHObject.m; sourceTree = SOURCE_ROOT; };
 		A55314771E755A1F002C0AD9 /* NHEvent.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = NHEvent.h; path = notHome/Model/NHEvent.h; sourceTree = SOURCE_ROOT; };
@@ -178,6 +180,7 @@
 			isa = PBXGroup;
 			children = (
 				A573C60C1E58A29900702346 /* notHomeTests.m */,
+				A530FE751E75F70400FD3B3E /* NHModelTests.m */,
 				A573C60E1E58A29900702346 /* Info.plist */,
 			);
 			path = notHomeTests;
@@ -543,6 +546,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				A573C60D1E58A29900702346 /* notHomeTests.m in Sources */,
+				A530FE761E75F70400FD3B3E /* NHModelTests.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
