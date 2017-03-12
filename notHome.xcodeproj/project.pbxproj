@@ -22,6 +22,12 @@
 		F3B5B824011A3F6877EF8852 /* libPods-notHomeTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 60E67580A4A8D0963A64A320 /* libPods-notHomeTests.a */; };
 		F5AACD761E74851500143A07 /* MSSearchBarViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F5AACD751E74851500143A07 /* MSSearchBarViewController.m */; };
 		F5AACD791E74857400143A07 /* MSSearchBar.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F5AACD771E74857400143A07 /* MSSearchBar.storyboard */; };
+		F5AACD971E75EED100143A07 /* Kong1.jpg in Resources */ = {isa = PBXBuildFile; fileRef = F5AACD921E75EED100143A07 /* Kong1.jpg */; };
+		F5AACD981E75EED100143A07 /* kong2.jpg in Resources */ = {isa = PBXBuildFile; fileRef = F5AACD931E75EED100143A07 /* kong2.jpg */; };
+		F5AACD991E75EED100143A07 /* lego.jpg in Resources */ = {isa = PBXBuildFile; fileRef = F5AACD941E75EED100143A07 /* lego.jpg */; };
+		F5AACD9A1E75EED100143A07 /* Logan.jpg in Resources */ = {isa = PBXBuildFile; fileRef = F5AACD951E75EED100143A07 /* Logan.jpg */; };
+		F5AACD9B1E75EED100143A07 /* rus.jpg in Resources */ = {isa = PBXBuildFile; fileRef = F5AACD961E75EED100143A07 /* rus.jpg */; };
+		F5AACDA01E75F67700143A07 /* MSTableViewImageCell.m in Sources */ = {isa = PBXBuildFile; fileRef = F5AACD9F1E75F67700143A07 /* MSTableViewImageCell.m */; };
 		FF02B3D229D146DD51EB5C38 /* libPods-notHomeUITests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = E9B11ADE824EB0228E181903 /* libPods-notHomeUITests.a */; };
 /* End PBXBuildFile section */
 
@@ -77,6 +83,13 @@
 		F5AACD741E74851500143A07 /* MSSearchBarViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MSSearchBarViewController.h; sourceTree = "<group>"; };
 		F5AACD751E74851500143A07 /* MSSearchBarViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MSSearchBarViewController.m; sourceTree = "<group>"; };
 		F5AACD781E74857400143A07 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/MSSearchBar.storyboard; sourceTree = "<group>"; };
+		F5AACD921E75EED100143A07 /* Kong1.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = Kong1.jpg; sourceTree = "<group>"; };
+		F5AACD931E75EED100143A07 /* kong2.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = kong2.jpg; sourceTree = "<group>"; };
+		F5AACD941E75EED100143A07 /* lego.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = lego.jpg; sourceTree = "<group>"; };
+		F5AACD951E75EED100143A07 /* Logan.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = Logan.jpg; sourceTree = "<group>"; };
+		F5AACD961E75EED100143A07 /* rus.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = rus.jpg; sourceTree = "<group>"; };
+		F5AACD9E1E75F67700143A07 /* MSTableViewImageCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MSTableViewImageCell.h; sourceTree = "<group>"; };
+		F5AACD9F1E75F67700143A07 /* MSTableViewImageCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MSTableViewImageCell.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -186,6 +199,7 @@
 		A5ABFADC1E5D6D5A00B5E7FA /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
+				F5AACD9D1E75F65600143A07 /* CustomCellSearchVC */,
 				A5ABFADD1E5D6D5A00B5E7FA /* FirstViewController.h */,
 				A5ABFADE1E5D6D5A00B5E7FA /* FirstViewController.m */,
 				A5ABFADF1E5D6D5A00B5E7FA /* SecondViewController.h */,
@@ -208,6 +222,7 @@
 		A5ABFAEA1E5F00EB00B5E7FA /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				F5AACD911E75EED100143A07 /* tests */,
 				A5ABFAE71E5F00E700B5E7FA /* Movie.h */,
 				A5ABFAE81E5F00E700B5E7FA /* Movie.m */,
 			);
@@ -226,6 +241,27 @@
 				54A2F2D86BF5052A92924C71 /* Pods-notHomeUITests.release.xcconfig */,
 			);
 			name = Pods;
+			sourceTree = "<group>";
+		};
+		F5AACD911E75EED100143A07 /* tests */ = {
+			isa = PBXGroup;
+			children = (
+				F5AACD921E75EED100143A07 /* Kong1.jpg */,
+				F5AACD931E75EED100143A07 /* kong2.jpg */,
+				F5AACD941E75EED100143A07 /* lego.jpg */,
+				F5AACD951E75EED100143A07 /* Logan.jpg */,
+				F5AACD961E75EED100143A07 /* rus.jpg */,
+			);
+			path = tests;
+			sourceTree = "<group>";
+		};
+		F5AACD9D1E75F65600143A07 /* CustomCellSearchVC */ = {
+			isa = PBXGroup;
+			children = (
+				F5AACD9E1E75F67700143A07 /* MSTableViewImageCell.h */,
+				F5AACD9F1E75F67700143A07 /* MSTableViewImageCell.m */,
+			);
+			path = CustomCellSearchVC;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -344,9 +380,14 @@
 			buildActionMask = 2147483647;
 			files = (
 				F5AACD791E74857400143A07 /* MSSearchBar.storyboard in Resources */,
+				F5AACD9A1E75EED100143A07 /* Logan.jpg in Resources */,
+				F5AACD981E75EED100143A07 /* kong2.jpg in Resources */,
+				F5AACD9B1E75EED100143A07 /* rus.jpg in Resources */,
 				A573C6021E58A29900702346 /* LaunchScreen.storyboard in Resources */,
 				A573C5FF1E58A29900702346 /* Assets.xcassets in Resources */,
 				A573C5FD1E58A29900702346 /* Main.storyboard in Resources */,
+				F5AACD991E75EED100143A07 /* lego.jpg in Resources */,
+				F5AACD971E75EED100143A07 /* Kong1.jpg in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -516,6 +557,7 @@
 				A573C5F41E58A29900702346 /* AppDelegate.m in Sources */,
 				A5ABFAE21E5D6D5A00B5E7FA /* FirstViewController.m in Sources */,
 				A573C5F11E58A29900702346 /* main.m in Sources */,
+				F5AACDA01E75F67700143A07 /* MSTableViewImageCell.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

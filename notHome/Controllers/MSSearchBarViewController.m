@@ -7,9 +7,16 @@
 //
 
 #import "MSSearchBarViewController.h"
+#import "MSTableViewImageCell.h"
 
 @interface MSSearchBarViewController () <UITableViewDelegate , UITableViewDataSource>
 @property (weak, nonatomic) IBOutlet UITableView *categoryTableView;
+
+@end
+
+@interface MSSearchBarViewController()
+
+@property (strong,nonatomic) NSMutableArray *imageArray;
 
 @end
 
@@ -17,7 +24,21 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    // Do any additional setup after loading the view.
+  
+    self.imageArray = [NSMutableArray array];
+    
+    UIImage *image1 = [UIImage imageNamed:@"Kong1.jpg"];
+    UIImage *image2 = [UIImage imageNamed:@"kong2.jpg"];
+    UIImage *image3 = [UIImage imageNamed:@"lego.jpg"];
+    UIImage *image4 = [UIImage imageNamed:@"Logan.jpg"];
+    UIImage *image5 = [UIImage imageNamed:@"rus.jpg"];
+    [self.imageArray addObject:image1];
+    [self.imageArray addObject:image2];
+    [self.imageArray addObject:image3];
+    [self.imageArray addObject:image4];
+    [self.imageArray addObject:image5];
+    
+    
 }
 
 - (void)didReceiveMemoryWarning {
@@ -56,7 +77,7 @@
     UITableViewCell *segmentedControlCell = [tableView dequeueReusableCellWithIdentifier:segmentedControlIdentifier];
     UITableViewCell *yourTagCollectionCell = [tableView dequeueReusableCellWithIdentifier:yourTagCollectionIdentifier];
     UITableViewCell *popularNowCollectionCell = [tableView dequeueReusableCellWithIdentifier:popularNowCollectionIdentifier];
-    UITableViewCell *anyCategoryCell = [tableView dequeueReusableCellWithIdentifier:anyCategoryIdentifier];
+    MSTableViewImageCell *anyCategoryCell = [tableView dequeueReusableCellWithIdentifier:anyCategoryIdentifier];
     
   
     if (!searchCell) {
@@ -72,7 +93,7 @@
         popularNowCollectionCell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:popularNowCollectionIdentifier];
     }
     if (!anyCategoryCell) {
-        anyCategoryCell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:anyCategoryIdentifier];
+        anyCategoryCell = [[MSTableViewImageCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:anyCategoryIdentifier];
     }
     
     if (indexPath.section == 0) {
@@ -91,6 +112,13 @@
         return popularNowCollectionCell;
     }
     if (indexPath.section >= 3 && indexPath.section <=6 ) {
+        
+        anyCategoryCell.image1.image = [self.imageArray objectAtIndex:0];
+        anyCategoryCell.image2.image = [self.imageArray objectAtIndex:1];
+        anyCategoryCell.image3.image = [self.imageArray objectAtIndex:2];
+        anyCategoryCell.image4.image = [self.imageArray objectAtIndex:3];
+        anyCategoryCell.image5.image = [self.imageArray objectAtIndex:4];
+        
         return anyCategoryCell;
     }
     
