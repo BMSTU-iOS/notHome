@@ -6,12 +6,10 @@
 //  Copyright © 2017 BMSTU-iOS. All rights reserved.
 //
 
-
 #import <UIKit/UIKit.h>
 @class Movie;
-//#import <Foundation/Foundation.h>
 
-@interface movieCell : UITableViewCell
+@interface MovieCell : UITableViewCell
 
 -(void) fillCellWithMovie:(Movie *)model;
 
