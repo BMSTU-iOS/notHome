@@ -10,6 +10,9 @@
 
 static NSString * const kObjectID = @"id";
 static NSString * const kObjectSlug = @"slug";
+static NSString * const kObjectTitle = @"title";
+static NSString * const kObjectShortDescription = @"description";
+static NSString * const kObjectFullDescription = @"body_text";
 
 @implementation NHObject
 
@@ -26,7 +29,22 @@ static NSString * const kObjectSlug = @"slug";
         
         // Set slug
         if ([response objectForKey:kObjectSlug]) {
-            self.ID = ((NSNumber *)[response objectForKey:kObjectSlug]).integerValue;
+            self.slug = (NSString *)[response objectForKey:kObjectSlug];
+        }
+        
+        // Set title
+        if ([response objectForKey:kObjectTitle]) {
+            self.title = (NSString *)[response objectForKey:kObjectTitle];
+        }
+        
+        // Set short description
+        if ([response objectForKey:kObjectShortDescription]) {
+            self.shortDescription = (NSString *)[response objectForKey:kObjectShortDescription];
+        }
+        
+        // Set full description
+        if ([response objectForKey:kObjectFullDescription]) {
+            self.fullDescription = (NSString *)[response objectForKey:kObjectFullDescription];
         }
     }
     

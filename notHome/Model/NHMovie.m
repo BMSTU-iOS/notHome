@@ -8,9 +8,6 @@
 
 #import "NHMovie.h"
 
-static NSString * const kMovieTitle = @"title";
-static NSString * const kMovieShortDescription = @"description";
-static NSString * const kMovieFullDescription = @"body_text";
 static NSString * const kMoviePoster = @"poster";
 static NSString * const kMovieSiteURL = @"url";
 
@@ -21,21 +18,6 @@ static NSString * const kMovieSiteURL = @"url";
     self = [super initWithResponse:response];
 
     if (self) {
-        
-        // Set title
-        if ([response objectForKey:kMovieTitle]) {
-            self.title = (NSString *)[response objectForKey:kMovieTitle];
-        }
-        
-        // Set description
-        if ([response objectForKey:kMovieShortDescription]) {
-            self.shortDescription = (NSString *)[response objectForKey:kMovieShortDescription];
-        }
-        
-        // Set full description
-        if ([response objectForKey:kMovieFullDescription]) {
-            self.fullDescription = (NSString *)[response objectForKey:kMovieFullDescription];
-        }
         
         // Set poster URL
         if ([response objectForKey:kMoviePoster]) {
