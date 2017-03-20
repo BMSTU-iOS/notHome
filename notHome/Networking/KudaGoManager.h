@@ -29,4 +29,24 @@
                   success:(void(^)(NSArray *movies))success
                   failure:(void(^)(NSError *error))failure;
 
+
+-(void)getEventsWithPage:(NSInteger)page
+                pageSize:(NSInteger)pageSize
+                location:(NSString *)location
+                //fields
+                     lon:(NSNumber *)lon
+                     lat:(NSNumber *)lat
+                  radius:(NSNumber *)radius
+                 success:(void(^)(NSArray *events))success
+                 failure:(void(^)(NSError *error))failure;
+
+-(void)getPlacesWithPage:(NSInteger)page
+                pageSize:(NSInteger)pageSize
+                location:(NSString *)location
+                     lon:(NSNumber *)lon
+                     lat:(NSNumber *)lat
+                  radius:(NSNumber *)radius
+                 success:(void(^)(NSArray *events))success
+                 failure:(void(^)(NSError *error))failure;
+
 @end

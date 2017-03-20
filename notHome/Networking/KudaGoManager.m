@@ -10,6 +10,8 @@
 #import "AFNetworking.h"
 
 #import "Movie.h"
+#import "Place.h"
+#import "Event.h"
 
 static NSString * const kKudaGoURL = @"https://kudago.com/public-api/v1.3/";
 
@@ -197,4 +199,145 @@ static NSString * const kKudaGoURL = @"https://kudago.com/public-api/v1.3/";
                     }];
 }
 
+#pragma mark - Place
+
+-(void)getPlacesWithPage:(NSInteger)page
+                pageSize:(NSInteger)pageSize
+                location:(NSString *)location
+                     lon:(NSNumber *)lon
+                     lat:(NSNumber *)lat
+                  radius:(NSNumber *)radius
+                 success:(void(^)(NSArray *events))success
+                 failure:(void(^)(NSError *error))failure{
+    NSMutableDictionary *params;
+    
+    // * page
+    
+    if (page > 0)  {
+        [params setObject:@(page) forKey:@"page"];
+    }
+    
+    // * page size
+    
+    if (pageSize > 0) {
+        [params setObject:@(pageSize) forKey:@"page_size"];
+    }
+    
+    if (location){
+        [params setObject:location forKey:@"location"];
+    }
+    
+    if (lat.integerValue != 0){
+        [params setObject:lat forKey:@"lat"]; //проверить запись в словарь (setObj lat)
+    }
+    
+    if (lon.integerValue != 0){
+        [params setObject:lon forKey:@"lon"];
+    }
+    
+    if (radius.integerValue > 0){
+        [params setObject:radius forKey:@"radius"];
+    }
+    
+    [self.sessionManager GET:@"places"
+                  parameters:params
+                    progress:nil
+                     success:^(NSURLSessionDataTask * _Nonnull task, id  _Nullable responseObject) {
+                         if([responseObject objectForKey:@"results"]){
+                             NSArray *placesResponses = [responseObject objectForKey:@"results"];
+                             NSMutableArray *places = [NSMutableArray array];
+                             
+                             for (NSDictionary *placeResponse in placesResponses){
+                                 Place *place = [[Place alloc]initWithResponse:placeResponse];
+                                 
+                                 [places addObject:place];
+                             }
+                             if (success){
+                                 success(places);
+                             }
+                         } else {
+                                 NSError *error = [NSError errorWithDomain:NSPOSIXErrorDomain
+                                                                      code:-100
+                                                                  userInfo:@{NSLocalizedDescriptionKey: NSLocalizedString(@"Can't get results", nil)}];
+                                 failure(error);
+                             }
+                     }
+                     failure:^(NSURLSessionDataTask * _Nullable task, NSError * _Nonnull error){
+                         if (failure) {
+                             failure(error);
+                         }
+                     }];
+}
+
+#pragma mark - Event
+
+-(void)getEventsWithPage:(NSInteger)page
+                pageSize:(NSInteger)pageSize
+                location:(NSString *)location
+                     lon:(NSNumber *)lon
+                     lat:(NSNumber *)lat
+                  radius:(NSNumber *)radius
+                 success:(void (^)(NSArray *))success
+                 failure:(void (^)(NSError *))failure{
+    NSMutableDictionary *params;
+    
+    // * page
+    
+    if (page > 0)  {
+        [params setObject:@(page) forKey:@"page"];
+    }
+    
+    // * page size
+    
+    if (pageSize > 0) {
+        [params setObject:@(pageSize) forKey:@"page_size"];
+    }
+    
+    if (location){
+        [params setObject:location forKey:@"location"];
+    }
+    
+    if (lat.integerValue != 0){
+        [params setObject:lat forKey:@"lat"]; //проверить запись в словарь (setObj lat)
+    }
+    
+    if (lon.integerValue != 0){
+        [params setObject:lon forKey:@"lon"];
+    }
+    
+    if (radius.integerValue > 0){
+        [params setObject:radius forKey:@"radius"];
+    }
+
+    [self.sessionManager GET:@"events"
+                  parameters:params
+                    progress:nil
+                     success:^(NSURLSessionDataTask * _Nonnull task, id  _Nullable responseObject) {
+                         if([responseObject objectForKey:@"results"]){
+                             NSArray *eventResponses = [responseObject objectForKey:@"results"];
+                             NSMutableArray *events = [NSMutableArray array];
+                             
+                             for (NSDictionary *eventResponse in eventResponses){
+                                 Event *event = [[Event alloc]initWithResponse:eventResponse];
+                                 
+                                 [events addObject:event];
+                             }
+                             if (success){
+                                 success(events);
+                             }
+                         } else {
+                             NSError *error = [NSError errorWithDomain:NSPOSIXErrorDomain
+                                                                  code:-100
+                                                              userInfo:@{NSLocalizedDescriptionKey: NSLocalizedString(@"Can't get results", nil)}];
+                             failure(error);
+                         }
+                     
+
+                     } failure:^(NSURLSessionDataTask * _Nullable task, NSError * _Nonnull error) {
+                         if (failure) {
+                             failure(error);
+                         }
+
+                     }];
+}
 @end
