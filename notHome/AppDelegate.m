@@ -62,12 +62,16 @@
                                                  
                                              }];
 
+ // Request places examples
+ 
     [[KudaGoManager sharedManager] getPlacesWithPage:1 pageSize:5 location:@"msk" lon:nil lat:nil radius:nil success:^(NSArray *events) {
         
     } failure:^(NSError *error) {
         
     }];
     
+ // Request events examples
+
     [[KudaGoManager sharedManager] getEventsWithPage:1 pageSize:5 location:@"msk" lon:nil lat:nil radius:nil success:^(NSArray *events) {
         
     } failure:^(NSError *error) {
