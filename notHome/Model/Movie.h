@@ -6,15 +6,20 @@
 //  Copyright © 2017 BMSTU-iOS. All rights reserved.
 //
 
-#import <Foundation/Foundation.h>
+#import <Mantle/Mantle.h>
 
-@interface Movie : NSObject
+@interface MoviePoster : MTLModel <MTLJSONSerializing>
 
-@property (assign, nonatomic) NSInteger ID;
+@property (copy, nonatomic) NSURL *imageURL;
+@property (copy, nonatomic) NSDictionary *source;
 
-@property (strong, nonatomic) NSString *title;
-@property (strong, nonatomic) NSURL *posterURL;
+@end
 
-- (instancetype)initWithResponse:(NSDictionary *)response;
+
+@interface Movie : MTLModel <MTLJSONSerializing>
+
+@property (copy, nonatomic) NSNumber *ID;
+@property (copy, nonatomic) NSString *title;
+@property (strong, nonatomic) MoviePoster* poster;
 
 @end
