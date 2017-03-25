@@ -6,15 +6,12 @@
 //  Copyright © 2017 BMSTU-iOS. All rights reserved.
 //
 
-#import <Foundation/Foundation.h>
+#import <Mantle/Mantle.h>
 
-@interface Event : NSObject
+@interface Event : MTLModel <MTLJSONSerializing>
 
-@property (assign, nonatomic) NSInteger ID;
-
-@property (strong, nonatomic) NSString *title;
-@property (strong, nonatomic) NSString *slug;
-
--(instancetype) initWithResponse:(NSDictionary *)response;
+@property (copy, nonatomic) NSNumber *ID;
+@property (copy, nonatomic) NSString *title;
+@property (copy, nonatomic) NSString *slug;
 
 @end

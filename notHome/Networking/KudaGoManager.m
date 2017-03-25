@@ -139,11 +139,12 @@ static NSString * const kKudaGoURL = @"https://kudago.com/public-api/v1.3/";
                              
                              NSArray *movieResponses = [responseObject objectForKey:@"results"];
                              NSMutableArray *movies = [NSMutableArray array];
-                             
+                                                          
                              for (NSDictionary *movieResponse in movieResponses) {
+                                 Movie *movie = [MTLJSONAdapter modelOfClass:[Movie class]
+                                                          fromJSONDictionary:movieResponse
+                                                                       error:nil];
                                  
-                                 Movie *movie = [[Movie alloc] initWithResponse:movieResponse];
-        
                                  [movies addObject:movie];
                              }
                              
@@ -248,7 +249,9 @@ static NSString * const kKudaGoURL = @"https://kudago.com/public-api/v1.3/";
                              NSMutableArray *places = [NSMutableArray array];
                              
                              for (NSDictionary *placeResponse in placesResponses){
-                                 Place *place = [[Place alloc]initWithResponse:placeResponse];
+                                 Place *place = [MTLJSONAdapter modelOfClass:[Place class]
+                                                          fromJSONDictionary:placeResponse
+                                                                       error:nil];
                                  
                                  [places addObject:place];
                              }
@@ -318,8 +321,9 @@ static NSString * const kKudaGoURL = @"https://kudago.com/public-api/v1.3/";
                              NSMutableArray *events = [NSMutableArray array];
                              
                              for (NSDictionary *eventResponse in eventResponses){
-                                 Event *event = [[Event alloc]initWithResponse:eventResponse];
-                                 
+                                 Event *event = [MTLJSONAdapter modelOfClass:[Event class]
+                                                          fromJSONDictionary:eventResponse
+                                                                       error:nil];
                                  [events addObject:event];
                              }
                              if (success){

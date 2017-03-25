@@ -8,35 +8,34 @@
 
 #import "Movie.h"
 
-static NSString * const kMovieID = @"id";
-static NSString * const kMovieTitle = @"title";
-static NSString * const kMoviePoster = @"poster";
+@implementation MoviePoster
+
++ (NSDictionary *)JSONKeyPathsByPropertyKey {
+    return @{
+             @"imageURL":@"image",
+             @"source":@"source"
+             };
+}
+
++ (NSValueTransformer *)imageURLJSONTransformer {
+    return [NSValueTransformer valueTransformerForName:MTLURLValueTransformerName];
+}
+
+@end
+
 
 @implementation Movie
 
-- (instancetype)initWithResponse:(NSDictionary *)response {
-    
-    self = [super init];
++ (NSDictionary *)JSONKeyPathsByPropertyKey {
+    return @{
+             @"ID":@"id",
+             @"title":@"title",
+             @"poster":@"poster"
+             };
+}
 
-    if (self) {
-        
-        // Set ID
-        if ([response objectForKey:kMovieID]) {
-            self.ID = ((NSNumber *)[response objectForKey:kMovieID]).integerValue;
-        }
-        
-        // Set title
-        if ([response objectForKey:kMovieTitle]) {
-            self.title = (NSString *)[response objectForKey:kMovieTitle];
-        }
-        
-        // Set poster URL
-        if ([response objectForKey:kMoviePoster]) {
-            self.posterURL = [NSURL URLWithString:(NSString *)[[response objectForKey:kMoviePoster] objectForKey:@"image"]];
-        }
-    }
-    
-    return self;
++ (NSValueTransformer *)posterJSONTransformer {
+    return [MTLJSONAdapter dictionaryTransformerWithModelClass:MoviePoster.class];
 }
 
 @end

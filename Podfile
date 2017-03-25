@@ -7,6 +7,7 @@ target 'notHome' do
 
   # Pods for notHome
   pod 'AFNetworking'
+  pod 'Mantle'
 
   target 'notHomeTests' do
     inherit! :search_paths
