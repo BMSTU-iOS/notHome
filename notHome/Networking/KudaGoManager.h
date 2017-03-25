@@ -7,6 +7,8 @@
 //
 
 #import <Foundation/Foundation.h>
+#import "LocalizedCity.h"
+
 
 @interface KudaGoManager : NSObject
 
@@ -32,7 +34,7 @@
 
 -(void)getEventsWithPage:(NSInteger)page
                 pageSize:(NSInteger)pageSize
-                location:(NSString *)location
+                location:(NHCities)location
                 //fields
                      lon:(NSNumber *)lon
                      lat:(NSNumber *)lat

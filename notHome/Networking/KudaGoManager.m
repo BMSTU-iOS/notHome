@@ -15,8 +15,12 @@
 
 static NSString * const kKudaGoURL = @"https://kudago.com/public-api/v1.3/";
 
-@interface KudaGoManager ()
+@interface KudaGoManager () {
+    LocalizedCity *localizedCity;
+}
+
 @property (strong, nonatomic) AFHTTPSessionManager *sessionManager;
+
 @end
 
 @implementation KudaGoManager
@@ -41,8 +45,9 @@ static NSString * const kKudaGoURL = @"https://kudago.com/public-api/v1.3/";
     
     if (self) {
         // Set KudaGo API URL as base URL
-        NSURL *url = [NSURL URLWithString:kKudaGoURL];
-        self.sessionManager = [[AFHTTPSessionManager alloc] initWithBaseURL:url];
+        self.sessionManager = [[AFHTTPSessionManager alloc] initWithBaseURL:[NSURL URLWithString:kKudaGoURL]];
+        localizedCity = [[LocalizedCity alloc] init];
+        
     }
     
     return self;
@@ -276,7 +281,7 @@ static NSString * const kKudaGoURL = @"https://kudago.com/public-api/v1.3/";
 
 -(void)getEventsWithPage:(NSInteger)page
                 pageSize:(NSInteger)pageSize
-                location:(NSString *)location
+                location:(NHCities)location
                      lon:(NSNumber *)lon
                      lat:(NSNumber *)lat
                   radius:(NSNumber *)radius
@@ -297,7 +302,7 @@ static NSString * const kKudaGoURL = @"https://kudago.com/public-api/v1.3/";
     }
     
     if (location){
-        [params setObject:location forKey:@"location"];
+        [params setObject:[localizedCity getCity:location] forKey:@"location"];
     }
     
     if (lat.integerValue != 0){
