@@ -21,31 +21,32 @@
     // Override point for customization after application launch.
 
     // Request movies examples
+    /*
+    [[KudaGoManager sharedManager] getMoviesWithPage:1 pageSize:5 orderBy:nil location:@"msk" free:true placeID:0 since:nil until:nil success:^(NSArray *movies) {
+    } failure:^(NSError *error) {
+    }];
     
-//    [[KudaGoManager sharedManager] getMoviesWithPage:1 pageSize:5 orderBy:nil location:@"msk" free:true placeID:0 since:nil until:nil success:^(NSArray *movies) {
-//    } failure:^(NSError *error) {
-//    }];
-//    
-//    [[KudaGoManager sharedManager] getMoviesWithPage:1 pageSize:30 location:@"msk" success:^(NSArray *movies) {
-//    } failure:^(NSError *error) {
-//    }];
-//    
-//    
-//    [[KudaGoManager sharedManager] getMoviesWithPage:1 pageSize:5 orderBy:nil location:@"msk" free:true placeID:0 since:nil until:nil success:^(NSArray *movies) {
-//    } failure:^(NSError *error) {
-//    }];
-
- // Request places examples
+    [[KudaGoManager sharedManager] getMoviesWithPage:1 pageSize:30 location:@"msk" success:^(NSArray *movies) {
+    } failure:^(NSError *error) {
+    }];
     
-//    [[KudaGoManager sharedManager] getPlacesWithPage:1 pageSize:5 location:@"msk" lon:nil lat:nil radius:nil success:^(NSArray *events) {
-//    } failure:^(NSError *error) {
-//    }];
-    
- // Request events examples
-
+    [[KudaGoManager sharedManager] getMoviesWithPage:1 pageSize:5 orderBy:nil location:@"msk" free:true placeID:0 since:nil until:nil success:^(NSArray *movies) {
+    } failure:^(NSError *error) {
+    }];
+     */
+     
+    // Request places examples
+    /*
+    [[KudaGoManager sharedManager] getPlacesWithPage:1 pageSize:5 location:@"msk" lon:nil lat:nil radius:nil success:^(NSArray *events) {
+    } failure:^(NSError *error) {
+    }];
+     */
+    // Request events examples
+    /*
     [[KudaGoManager sharedManager] getEventsWithPage:1 pageSize:5 location:NHMoscow lon:nil lat:nil radius:nil success:^(NSArray *events) {
     } failure:^(NSError *error) {
     }];
+     */
     
     return YES;
 }
