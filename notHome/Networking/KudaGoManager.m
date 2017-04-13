@@ -10,11 +10,17 @@
 #import "AFNetworking.h"
 
 #import "Movie.h"
+#import "Place.h"
+#import "Event.h"
 
 static NSString * const kKudaGoURL = @"https://kudago.com/public-api/v1.3/";
 
-@interface KudaGoManager ()
+@interface KudaGoManager () {
+    LocalizedCity *localizedCity;
+}
+
 @property (strong, nonatomic) AFHTTPSessionManager *sessionManager;
+
 @end
 
 @implementation KudaGoManager
@@ -39,8 +45,9 @@ static NSString * const kKudaGoURL = @"https://kudago.com/public-api/v1.3/";
     
     if (self) {
         // Set KudaGo API URL as base URL
-        NSURL *url = [NSURL URLWithString:kKudaGoURL];
-        self.sessionManager = [[AFHTTPSessionManager alloc] initWithBaseURL:url];
+        self.sessionManager = [[AFHTTPSessionManager alloc] initWithBaseURL:[NSURL URLWithString:kKudaGoURL]];
+        localizedCity = [[LocalizedCity alloc] init];
+        
     }
     
     return self;
@@ -137,11 +144,12 @@ static NSString * const kKudaGoURL = @"https://kudago.com/public-api/v1.3/";
                              
                              NSArray *movieResponses = [responseObject objectForKey:@"results"];
                              NSMutableArray *movies = [NSMutableArray array];
-                             
+                                                          
                              for (NSDictionary *movieResponse in movieResponses) {
+                                 Movie *movie = [MTLJSONAdapter modelOfClass:[Movie class]
+                                                          fromJSONDictionary:movieResponse
+                                                                       error:nil];
                                  
-                                 Movie *movie = [[Movie alloc] initWithResponse:movieResponse];
-        
                                  [movies addObject:movie];
                              }
                              
@@ -197,4 +205,148 @@ static NSString * const kKudaGoURL = @"https://kudago.com/public-api/v1.3/";
                     }];
 }
 
+#pragma mark - Place
+
+-(void)getPlacesWithPage:(NSInteger)page
+                pageSize:(NSInteger)pageSize
+                location:(NSString *)location
+                     lon:(NSNumber *)lon
+                     lat:(NSNumber *)lat
+                  radius:(NSNumber *)radius
+                 success:(void(^)(NSArray *events))success
+                 failure:(void(^)(NSError *error))failure{
+    NSMutableDictionary *params;
+    
+    // * page
+    
+    if (page > 0)  {
+        [params setObject:@(page) forKey:@"page"];
+    }
+    
+    // * page size
+    
+    if (pageSize > 0) {
+        [params setObject:@(pageSize) forKey:@"page_size"];
+    }
+    
+    if (location){
+        [params setObject:location forKey:@"location"];
+    }
+    
+    if (lat.integerValue != 0){
+        [params setObject:lat forKey:@"lat"]; //проверить запись в словарь (setObj lat)
+    }
+    
+    if (lon.integerValue != 0){
+        [params setObject:lon forKey:@"lon"];
+    }
+    
+    if (radius.integerValue > 0){
+        [params setObject:radius forKey:@"radius"];
+    }
+    
+    [self.sessionManager GET:@"places"
+                  parameters:params
+                    progress:nil
+                     success:^(NSURLSessionDataTask * _Nonnull task, id  _Nullable responseObject) {
+                         if([responseObject objectForKey:@"results"]){
+                             NSArray *placesResponses = [responseObject objectForKey:@"results"];
+                             NSMutableArray *places = [NSMutableArray array];
+                             
+                             for (NSDictionary *placeResponse in placesResponses){
+                                 Place *place = [MTLJSONAdapter modelOfClass:[Place class]
+                                                          fromJSONDictionary:placeResponse
+                                                                       error:nil];
+                                 
+                                 [places addObject:place];
+                             }
+                             if (success){
+                                 success(places);
+                             }
+                         } else {
+                                 NSError *error = [NSError errorWithDomain:NSPOSIXErrorDomain
+                                                                      code:-100
+                                                                  userInfo:@{NSLocalizedDescriptionKey: NSLocalizedString(@"Can't get results", nil)}];
+                                 failure(error);
+                             }
+                     }
+                     failure:^(NSURLSessionDataTask * _Nullable task, NSError * _Nonnull error){
+                         if (failure) {
+                             failure(error);
+                         }
+                     }];
+}
+
+#pragma mark - Event
+
+-(void)getEventsWithPage:(NSInteger)page
+                pageSize:(NSInteger)pageSize
+                location:(NHCities)location
+                     lon:(NSNumber *)lon
+                     lat:(NSNumber *)lat
+                  radius:(NSNumber *)radius
+                 success:(void (^)(NSArray *))success
+                 failure:(void (^)(NSError *))failure{
+    NSMutableDictionary *params;
+    
+    // * page
+    
+    if (page > 0)  {
+        [params setObject:@(page) forKey:@"page"];
+    }
+    
+    // * page size
+    
+    if (pageSize > 0) {
+        [params setObject:@(pageSize) forKey:@"page_size"];
+    }
+    
+    if (location){
+        [params setObject:[localizedCity getCity:location] forKey:@"location"];
+    }
+    
+    if (lat.integerValue != 0){
+        [params setObject:lat forKey:@"lat"]; //проверить запись в словарь (setObj lat)
+    }
+    
+    if (lon.integerValue != 0){
+        [params setObject:lon forKey:@"lon"];
+    }
+    
+    if (radius.integerValue > 0){
+        [params setObject:radius forKey:@"radius"];
+    }
+
+    [self.sessionManager GET:@"events"
+                  parameters:params
+                    progress:nil
+                     success:^(NSURLSessionDataTask * _Nonnull task, id  _Nullable responseObject) {
+                         if([responseObject objectForKey:@"results"]){
+                             NSArray *eventResponses = [responseObject objectForKey:@"results"];
+                             NSMutableArray *events = [NSMutableArray array];
+                             
+                             for (NSDictionary *eventResponse in eventResponses){
+                                 Event *event = [MTLJSONAdapter modelOfClass:[Event class]
+                                                          fromJSONDictionary:eventResponse
+                                                                       error:nil];
+                                 [events addObject:event];
+                             }
+                             if (success){
+                                 success(events);
+                             }
+                         } else {
+                             NSError *error = [NSError errorWithDomain:NSPOSIXErrorDomain
+                                                                  code:-100
+                                                              userInfo:@{NSLocalizedDescriptionKey: NSLocalizedString(@"Can't get results", nil)}];
+                             failure(error);
+                         }
+                     
+
+                     } failure:^(NSURLSessionDataTask * _Nullable task, NSError * _Nonnull error) {
+                         if (failure) {
+                             failure(error);
+                         }
+
+                     }];
+}
 @end

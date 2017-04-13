@@ -7,6 +7,8 @@
 //
 
 #import <Foundation/Foundation.h>
+#import "LocalizedCity.h"
+
 
 @interface KudaGoManager : NSObject
 
@@ -28,5 +30,25 @@
                     until:(NSDate *)untilDate
                   success:(void(^)(NSArray *movies))success
                   failure:(void(^)(NSError *error))failure;
+
+
+-(void)getEventsWithPage:(NSInteger)page
+                pageSize:(NSInteger)pageSize
+                location:(NHCities)location
+                //fields
+                     lon:(NSNumber *)lon
+                     lat:(NSNumber *)lat
+                  radius:(NSNumber *)radius
+                 success:(void(^)(NSArray *events))success
+                 failure:(void(^)(NSError *error))failure;
+
+-(void)getPlacesWithPage:(NSInteger)page
+                pageSize:(NSInteger)pageSize
+                location:(NSString *)location
+                     lon:(NSNumber *)lon
+                     lat:(NSNumber *)lat
+                  radius:(NSNumber *)radius
+                 success:(void(^)(NSArray *events))success
+                 failure:(void(^)(NSError *error))failure;
 
 @end

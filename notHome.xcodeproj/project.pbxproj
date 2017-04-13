@@ -18,7 +18,10 @@
 		A5ABFAE31E5D6D5A00B5E7FA /* SecondViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A5ABFAE01E5D6D5A00B5E7FA /* SecondViewController.m */; };
 		A5ABFAE61E5D7A9B00B5E7FA /* KudaGoManager.m in Sources */ = {isa = PBXBuildFile; fileRef = A5ABFAE51E5D7A9B00B5E7FA /* KudaGoManager.m */; };
 		A5ABFAE91E5F00E700B5E7FA /* Movie.m in Sources */ = {isa = PBXBuildFile; fileRef = A5ABFAE81E5F00E700B5E7FA /* Movie.m */; };
+		AA2192E51E7BDD8200A248A7 /* Place.m in Sources */ = {isa = PBXBuildFile; fileRef = AA2192E41E7BDD8200A248A7 /* Place.m */; };
+		AA2192E81E7BF25300A248A7 /* Event.m in Sources */ = {isa = PBXBuildFile; fileRef = AA2192E71E7BF25300A248A7 /* Event.m */; };
 		C53B9A269122A49A9F4D5368 /* libPods-notHome.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 1FDD803F17515DE6005DE8BA /* libPods-notHome.a */; };
+		C9DD044C1E86BE0900EFB7FD /* LocalizedCity.m in Sources */ = {isa = PBXBuildFile; fileRef = C9DD044B1E86BE0900EFB7FD /* LocalizedCity.m */; };
 		F3B5B824011A3F6877EF8852 /* libPods-notHomeTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 60E67580A4A8D0963A64A320 /* libPods-notHomeTests.a */; };
 		F5AACD761E74851500143A07 /* MSSearchBarViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F5AACD751E74851500143A07 /* MSSearchBarViewController.m */; };
 		F5AACD791E74857400143A07 /* MSSearchBar.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F5AACD771E74857400143A07 /* MSSearchBar.storyboard */; };
@@ -71,6 +74,12 @@
 		A5ABFAE71E5F00E700B5E7FA /* Movie.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Movie.h; path = notHome/Model/Movie.h; sourceTree = SOURCE_ROOT; };
 		A5ABFAE81E5F00E700B5E7FA /* Movie.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Movie.m; path = notHome/Model/Movie.m; sourceTree = SOURCE_ROOT; };
 		A66D952373CA12F3A3A8FA34 /* Pods-notHomeTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-notHomeTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-notHomeTests/Pods-notHomeTests.debug.xcconfig"; sourceTree = "<group>"; };
+		AA2192E31E7BDD8200A248A7 /* Place.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Place.h; path = notHome/Model/Place.h; sourceTree = SOURCE_ROOT; };
+		AA2192E41E7BDD8200A248A7 /* Place.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Place.m; path = notHome/Model/Place.m; sourceTree = SOURCE_ROOT; };
+		AA2192E61E7BF25300A248A7 /* Event.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Event.h; path = notHome/Model/Event.h; sourceTree = SOURCE_ROOT; };
+		AA2192E71E7BF25300A248A7 /* Event.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Event.m; path = notHome/Model/Event.m; sourceTree = SOURCE_ROOT; };
+		C9DD044A1E86BE0900EFB7FD /* LocalizedCity.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LocalizedCity.h; sourceTree = "<group>"; };
+		C9DD044B1E86BE0900EFB7FD /* LocalizedCity.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LocalizedCity.m; sourceTree = "<group>"; };
 		E9B11ADE824EB0228E181903 /* libPods-notHomeUITests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-notHomeUITests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		EB2943A172BB9FC677CD598E /* Pods-notHomeUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-notHomeUITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-notHomeUITests/Pods-notHomeUITests.debug.xcconfig"; sourceTree = "<group>"; };
 		F4674073B2B37018E3B729C2 /* Pods-notHomeTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-notHomeTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-notHomeTests/Pods-notHomeTests.release.xcconfig"; sourceTree = "<group>"; };
@@ -149,6 +158,7 @@
 				A573C5F31E58A29900702346 /* AppDelegate.m */,
 				A573C5FB1E58A29900702346 /* Main.storyboard */,
 				F5AACD771E74857400143A07 /* MSSearchBar.storyboard */,
+				C9DD04491E86BCC700EFB7FD /* Helper */,
 				A573C5EF1E58A29900702346 /* Supporting Files */,
 			);
 			path = notHome;
@@ -210,9 +220,22 @@
 			children = (
 				A5ABFAE71E5F00E700B5E7FA /* Movie.h */,
 				A5ABFAE81E5F00E700B5E7FA /* Movie.m */,
+				AA2192E31E7BDD8200A248A7 /* Place.h */,
+				AA2192E41E7BDD8200A248A7 /* Place.m */,
+				AA2192E61E7BF25300A248A7 /* Event.h */,
+				AA2192E71E7BF25300A248A7 /* Event.m */,
 			);
 			name = Model;
 			path = Networking;
+			sourceTree = "<group>";
+		};
+		C9DD04491E86BCC700EFB7FD /* Helper */ = {
+			isa = PBXGroup;
+			children = (
+				C9DD044A1E86BE0900EFB7FD /* LocalizedCity.h */,
+				C9DD044B1E86BE0900EFB7FD /* LocalizedCity.m */,
+			);
+			path = Helper;
 			sourceTree = "<group>";
 		};
 		CEAC75A90D2144F7E9BC2434 /* Pods */ = {
@@ -511,11 +534,14 @@
 			files = (
 				A5ABFAE91E5F00E700B5E7FA /* Movie.m in Sources */,
 				A5ABFAE31E5D6D5A00B5E7FA /* SecondViewController.m in Sources */,
+				C9DD044C1E86BE0900EFB7FD /* LocalizedCity.m in Sources */,
 				A5ABFAE61E5D7A9B00B5E7FA /* KudaGoManager.m in Sources */,
+				AA2192E81E7BF25300A248A7 /* Event.m in Sources */,
 				F5AACD761E74851500143A07 /* MSSearchBarViewController.m in Sources */,
 				A573C5F41E58A29900702346 /* AppDelegate.m in Sources */,
 				A5ABFAE21E5D6D5A00B5E7FA /* FirstViewController.m in Sources */,
 				A573C5F11E58A29900702346 /* main.m in Sources */,
+				AA2192E51E7BDD8200A248A7 /* Place.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
